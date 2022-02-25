@@ -29,6 +29,17 @@ export const userWithIDSchema = userSchema.extend({
   id: z.number(),
 });
 
+export const loginSchema = z.object({
+  username: z.string({
+    required_error: 'Username is required',
+  }),
+  
+  password: z.string({
+    required_error: 'Password is required',
+  }),
+
+});
+
 export type Token = {
   id: number;
   username: string;
@@ -37,3 +48,5 @@ export type Token = {
 export type User = z.infer<typeof userSchema>; // https://www.npmjs.com/package/zod#basic-usage
 
 export type UserID = z.infer<typeof userWithIDSchema>;
+
+export type Login = z.infer<typeof loginSchema >;
