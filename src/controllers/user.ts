@@ -9,7 +9,7 @@ const createUser = async (req: Request, res: Response) => {
 
   userSchema.parse(data); // https://www.npmjs.com/package/zod#basic-usage
   
-  const newUser: UserID = await userService.createUser(req.body);
+  const newUser: UserID = await userService.createUser(data);
   const { id, username } = newUser;
   const token = generateJWT({ id, username });
 
