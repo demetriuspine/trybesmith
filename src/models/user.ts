@@ -6,7 +6,7 @@ const createUser = async ({ username, password, classe, level }: User) => {
   const query = `
   INSERT INTO Trybesmith.Users (username, password, classe, level)
   VALUES (?, ?, ?, ?)
-  `;
+  `; // insert retorna um OkPacket ou ResultSetHeader
 
   const values = [username, password, classe, level];
 
