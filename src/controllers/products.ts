@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import 'express-async-errors';
-import { Product, ProductObj, productSchema } from '../@types/Product';
+import { Product, ProductInfo, ProductObj, productSchema } from '../@types/Product';
 import productsService from '../services/products';
 import StatusCode from '../enums/StatusCode';
 
@@ -15,7 +15,7 @@ const createProduct = async (req: Request, res: Response) => {
 };
 
 const getAllProducts = async (req: Request, res: Response) => {
-  const products = await productsService.getAllProducts();
+  const products: ProductInfo[] = await productsService.getAllProducts();
 
   return res.status(StatusCode.OK).json(products);
 };
