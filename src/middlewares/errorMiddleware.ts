@@ -6,7 +6,7 @@ const errorMiddleware: ErrorRequestHandler = async (err, _req, res, _next) => { 
   console.log(`err: ${err}`);
 
   if (err.name === 'JsonWebTokenError') {
-    return res.status(401).json({ error: 'Invalid token' });
+    return res.status(StatusCode.UNAUTHORIZED).json({ error: 'Invalid token' });
   }
 
   if (err instanceof ZodError) { // https://github.com/colinhacks/zod/blob/master/ERROR_HANDLING.md
