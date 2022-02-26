@@ -1,5 +1,5 @@
 import { sign, verify } from 'jsonwebtoken';
-import { Token } from '../types/User';
+import { Token } from '../@types/User';
 
 const secret = 'trybesmith';
 

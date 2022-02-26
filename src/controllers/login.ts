@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import loginService from '../services/login';
-import { Login, loginSchema } from '../types/User';
+import { Login, loginSchema } from '../@types/User';
 import { generateJWT } from '../auth/generateJWT';
 import StatusCode from '../enums/StatusCode';
 

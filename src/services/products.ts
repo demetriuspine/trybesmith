@@ -1,4 +1,4 @@
-import { Product, ProductObj } from '../types/Product';
+import { Product, ProductObj } from '../@types/Product';
 import productsModel from '../models/products';
 
 const addProduct = async (product: Product): Promise<ProductObj> => {

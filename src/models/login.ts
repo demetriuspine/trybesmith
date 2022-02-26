@@ -1,5 +1,5 @@
 import { RowDataPacket } from 'mysql2';
-import { Login, Token } from '../types/User';
+import { Login, Token } from '../@types/User';
 import connection from './connection';
 
 const login = async ({ username, password }: Login): Promise<Token[]> => {

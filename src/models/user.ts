@@ -1,5 +1,5 @@
 import { ResultSetHeader } from 'mysql2';
-import { User, UserID } from '../types/User';
+import { User, UserID } from '../@types/User';
 import connection from './connection';
 
 const createUser = async ({ username, password, classe, level }: User) => {

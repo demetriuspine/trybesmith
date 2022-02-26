@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import 'express-async-errors';
-import { Product, ProductObj, productSchema } from '../types/Product';
+import { Product, ProductObj, productSchema } from '../@types/Product';
 import productsService from '../services/products';
 import StatusCode from '../enums/StatusCode';
 

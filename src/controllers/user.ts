@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import userService from '../services/user';
-import { User, UserID, userSchema } from '../types/User';
+import { User, UserID, userSchema } from '../@types/User';
 import { generateJWT } from '../auth/generateJWT';
 import StatusCode from '../enums/StatusCode';
 
