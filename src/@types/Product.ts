@@ -24,3 +24,10 @@ export type ProductObj = {
     amount: string
   }
 };
+
+export type ProductInfo = {
+  id: number,
+  name: string
+  amount: string,
+  orderId: number | null,
+};
